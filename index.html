@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<center>
+	<fieldset style="width:250px;"  >
+		<legend><b>Control Panel</b></legend>
+		<button type="button" class="move" id="clickF">Move Forward</button><br>
+  		<button type="button" class="move" id="clickL">Turn Left</button><br>
+ 		<button type="button" class="move" id="clickR">Turn Right</button><br>
+  		<button type="button" class="move" id="clickB">Move Backward</button><br>
+ 	</fieldset>
+</center>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+   $(document).ready(function(){
+    $('#clickF').mousedown(function(){
+     var a = new XMLHttpRequest();
+     a.open("GET", "move-forward.php");
+     a.onreadystatechange=function(){
+      if(a.readyState==4){
+       if(a.status == 200){
+       }
+       else{
+       alert("Error")
+       }
+      }
+     }
+     a.send();
+    });
+
+    $('#clickF').mouseup(function(){
+     var a = new XMLHttpRequest();
+     a.open("GET", "stop.php");
+     a.onreadystatechange=function(){
+      if(a.readyState==4){
+       if(a.status == 200){
+       }
+       else{
+       alert("Error")
+       }
+      }
+     }
+     a.send();
+    });
+
+    $('#clickL').mousedown(function(){
+     var a = new XMLHttpRequest();
+     a.open("GET", "turn-left.php");
+     a.onreadystatechange=function(){
+      if(a.readyState==4){
+       if(a.status == 200){
+       }
+       else{
+       alert("Error")
+       }
+      }
+     }
+     a.send();
+    });
+
+    $('#clickR').mousedown(function(){
+     var a = new XMLHttpRequest();
+     a.open("GET", "turn-right.php");
+     a.onreadystatechange=function(){
+      if(a.readyState==4){
+       if(a.status == 200){
+       }
+       else{
+       alert("Error")
+       }
+      }
+     }
+     a.send();
+    });
+});
+
+</script>
+
+</body>
+</html>
