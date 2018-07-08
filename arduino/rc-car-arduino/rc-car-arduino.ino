@@ -122,10 +122,11 @@ void moveForward()
   digitalWrite(IN4, LOW);  
   digitalWrite(IN3, HIGH);  
 
-//  Serial.println("**** Di Thang");
-
   analogWrite(ENB, speedOfCar);  
   analogWrite(ENA, speedOfCar);  
+  
+  Serial.println("**** Di Thang");
+  
 }
 
 void moveBackward()
@@ -136,10 +137,10 @@ void moveBackward()
      digitalWrite(IN4, HIGH); 
      digitalWrite(IN3, LOW);   
 
-//     Serial.println("**** Di lui");
-
      analogWrite(ENB, speedOfCar);  
-     analogWrite(ENA, speedOfCar);  
+     analogWrite(ENA, speedOfCar); 
+
+     Serial.println("**** Di lui");
 }
 
 void turnRight()
@@ -153,7 +154,7 @@ void turnRight()
      analogWrite(ENB, speedOfCar);  
      analogWrite(ENA, speedOfCar);   
 
-//       Serial.println("**** Queo phai");
+     Serial.println("**** Queo phai");
 }
 
 void turnLeft()
@@ -167,7 +168,7 @@ void turnLeft()
      analogWrite(ENB, speedOfCar);  
      analogWrite(ENA, speedOfCar);   
 
-//     Serial.println("**** Queo trai");
+     Serial.println("**** Queo trai");
 }
 
 void moveForwardLeft()
@@ -182,7 +183,7 @@ void moveForwardLeft()
      analogWrite(ENA, speedOfCar);  
      
 
-//     Serial.println("**** Thang Trai");
+     Serial.println("**** Thang Trai");
 }
 
 void moveForwardRight()
@@ -197,7 +198,7 @@ void moveForwardRight()
      analogWrite(ENA, speedOfCar/3*2);  
     
 
-//     Serial.println("**** Thang Phai");
+     Serial.println("**** Thang Phai");
 }
 
 void moveBackwardRight()
@@ -212,7 +213,7 @@ void moveBackwardRight()
      analogWrite(ENA, speedOfCar);  
   
 
-//     Serial.println("**** Lui phai");
+     Serial.println("**** Lui phai");
 }
 
 void moveBackwardLeft()
@@ -226,7 +227,7 @@ void moveBackwardLeft()
      analogWrite(ENB, speedOfCar);  
      analogWrite(ENA, speedOfCar/3*2);  
 
-//     Serial.println("**** Lui trai");
+     Serial.println("**** Lui trai");
 }
 
 void carStop()
@@ -240,7 +241,7 @@ void carStop()
      analogWrite(ENB, 0);  
      analogWrite(ENA, 0); 
 
-//     Serial.println("**** Dung");
+     Serial.println("**** Dung");
 }
 
 /*************************************/
